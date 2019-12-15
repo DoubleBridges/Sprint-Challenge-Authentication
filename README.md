@@ -40,11 +40,23 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] What is the purpose of using _sessions_?
 
+  It is method of authentication in which session data is stored in serve memory while a session id is tored in a cookie in the browser. On subsuquent requests to the server, the session id is compared to the stored data and used to grant access. The session is terminated by either expiring from a set time limit, logging out, or closing the browser.
+
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
+
+  It hashes the password data in a one way encryption. Bcrypt adds "salt" (random data) to the password data that further complicates the hash, and also allows you to control the "work" factor by choosing the nuber of times the data is passed through the hash.
 
 - [ ] What does bcrypt do to slow down attackers?
 
+Bcrypt uses a slow hashing algorythm on purpose, making the encryption more time consuming to break. The addition of a dynamic "work" factor ensures that as hardware gets computationally faster, the hashing can be adjusted to take longer in order to make the attempts at decryption too laborsome to be worth while.
+
 - [ ] What are the three parts of the JSON Web Token?
+
+ 1. Header
+ 2. Payload
+ 3. Signature
+
+
 
 ## Minimum Viable Product
 
